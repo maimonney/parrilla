@@ -1,0 +1,8 @@
+/* Paleta de colores */
+:root{
+    --color-Negro: #000000;
+    --color-Primario: #601844;
+    --color-PrimarioOscuro: #300620;
+    --color-Secundario: #FFF5D7;
+    --color-SecundarioOscuro: #e0d19c;
+}

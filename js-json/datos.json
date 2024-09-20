@@ -1,0 +1,118 @@
+{
+    "Barba": [
+        {
+            "id": "1",
+            "titulo": "Barba",
+            "productos": {
+                "barba1": {
+                    "id": "MLA862170267",
+                    "link": "https://todoparrillas.mercadoshops.com.ar/MLA-862170267-parrilla-con-tapa-barba-n1-con-fogon-y-mesada-_JM#position%3D2%26search_layout%3Dgrid%26type%3Ditem%26tracking_id%3D83f879c7-f32c-44ac-be01-3855adf16c87"
+                },
+                "barba2": {
+                    "id": "MLA862170268",
+                    "link": "https://todoparrillas.mercadoshops.com.ar/MLA-862170268-parrilla-con-tapa-barba-n2-con-fogon-y-mesada-_JM#position%3D2%26search_layout%3Dgrid%26type%3Ditem%26tracking_id%3D83f879c7-f32c-44ac-be01-3855adf16c88"
+                },
+                "barba3": {
+                    "id": "MLA862170269",
+                    "link": "https://todoparrillas.mercadoshops.com.ar/MLA-862170269-parrilla-con-tapa-barba-n3-con-fogon-y-mesada-_JM#position%3D2%26search_layout%3Dgrid%26type%3Ditem%26tracking_id%3D83f879c7-f32c-44ac-be01-3855adf16c89"
+                }
+            },
+            "accesorios": {
+                "ac_1": {
+                    "nombre": "Plancha lisa sobre fogón",
+                    "precio": "MLA863897337",
+                    "link": "https://todoparrillas.mercadoshops.com.ar/MLA-863897337-plancha-lisa-sobre-fogon-_JM"
+                },
+                "ac_2": {
+                    "nombre": "Faldón de planchuela",
+                    "precio": "MLA1114080845",
+                    "link": "https://todoparrillas.mercadoshops.com.ar/MLA-1114080845-faldon-de-planchuela-_JM"
+                },
+                "ac_3": {
+                    "nombre": "Brasero de hierro",
+                    "precio": "MLA1119091532",
+                    "link": "https://todoparrillas.mercadoshops.com.ar/MLA-1119091532-brasero-de-hierro-_JM"
+                }
+            }
+        }
+    ],
+    "QBO": [
+        {
+            "id": "1",
+            "titulo": "La BQO",
+            "pie": "Parrilla con mueble inferior y tapa construida en chapa. Distinta por donde se la mire.",
+            "img": {
+                "img1": "img/barba1.jpg",
+                "img2": "img/barba2.png",
+                "img3": "img/barba3.jpg",
+                "img4": "img/barba4.jpg"
+            },
+            "subtitulo1": "BQO",
+            "caracteristicas": {
+                "li1": "Gabinete inferior y cuerpo en chapa de hierro N°20 de 9mm de espesor.",
+                "li2": "Reforzada en los bordes con planchuela de 3,2mm de espesor.",
+                "li3": "Patas construidas en caño estructural soldado, fogón y mesada extraíbles.",
+                "li4": "Carrocería pintada con pintura electroestatica en polvo e-poxi hibrida de poliester que da un acabado parejo, prolijo y durable.",
+                "li5": "Herraje interno en hierro ángulo enlozado de 5/8 x 1/8 con cadenas de eslabón soldados zincadas.",
+                "li6": "Ruedas industriales de PVC giratorias a rulemán con freno."
+            },
+            "subtitulo2": "Medidas con fogón y mesada",
+            "medidas": {
+                "alto": {
+                    "ln_1": "125cm",
+                    "ln_2": "125cm",
+                    "ln_3": "125cm"
+                },
+                "ancho": {
+                    "an_1": "140cm",
+                    "an_2": "165cm",
+                    "an_3": "190cm"
+                },
+                "profundidad": {
+                    "pn_1": "55cm",
+                    "pn_2": "55cm",
+                    "pn_3": "55cm"
+                },
+                "herraje": {
+                    "hn_1": "60 x 45cm",
+                    "hn_2": "80 x 45cm",
+                    "hn_3": "80 x 45cm"
+                }
+            },
+            "productos": {
+                "barba1": {
+                    "id": "MLA862170267",
+                    "link": "https://todoparrillas.mercadoshops.com.ar/MLA-862170267-parrilla-con-tapa-barba-n1-con-fogon-y-mesada-_JM#position%3D2%26search_layout%3Dgrid%26type%3Ditem%26tracking_id%3D83f879c7-f32c-44ac-be01-3855adf16c87"
+                },
+                "barba2": {
+                    "id": "MLA862170268",
+                    "link": "https://todoparrillas.mercadoshops.com.ar/MLA-862170268-parrilla-con-tapa-barba-n2-con-fogon-y-mesada-_JM#position%3D2%26search_layout%3Dgrid%26type%3Ditem%26tracking_id%3D83f879c7-f32c-44ac-be01-3855adf16c88"
+                },
+                "barba3": {
+                    "id": "MLA862170269",
+                    "link": "https://todoparrillas.mercadoshops.com.ar/MLA-862170269-parrilla-con-tapa-barba-n3-con-fogon-y-mesada-_JM#position%3D2%26search_layout%3Dgrid%26type%3Ditem%26tracking_id%3D83f879c7-f32c-44ac-be01-3855adf16c89"
+                }
+            },
+            "subtitulo3": "Accesorios especiales",
+            "accesorios": {
+                "ac_1": {
+                    "nombre": "Plancha lisa sobre fogón",
+                    "precio": "MLA863897337",
+                    "link": "https://todoparrillas.mercadoshops.com.ar/MLA-863897337-plancha-lisa-sobre-fogon-_JM"
+                },
+                "ac_2": {
+                    "nombre": "Faldón de planchuela",
+                    "precio": "MLA1114080845",
+                    "link": "https://todoparrillas.mercadoshops.com.ar/MLA-1114080845-faldon-de-planchuela-_JM"
+                },
+                "ac_3": {
+                    "nombre": "Brasero de hierro",
+                    "precio": "MLA1119091532",
+                    "link": "https://todoparrillas.mercadoshops.com.ar/MLA-1119091532-brasero-de-hierro-_JM"
+                }
+            }
+        }
+    ],
+    "Flama": [],
+    "Gillotina": []
+}

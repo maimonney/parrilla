@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+  }
+
+  body{
+    background-color: var(--color-PrimarioOscuro);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+.producto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+}
+
+.producto h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+.producto p {
+    font-size: 1.2rem;
+    color: white;
+    font-style: italic;
+}
+
+h2 {
+    font-family: 'VarsityTeam'; 
+    src: url('../font/VarsityTeam-Bold.otf') format('opentype');
+    font-size: 42px;
+    color: var(--color-SecundarioOscuro);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.divisiones {
+    display: flex;
+    flex-wrap: wrap;
+    color: #ffffff;
+    padding-top: 20px;
+    margin: 90px 150px;
+    gap: 100px;
+}
+
+.cont_carruInfo,
+.cont_ModeloTabla {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont_carruInfo,
+.cont_ModeloTabla,
+.cont_AccesorioCarru {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.cont_ModeloTabla>div {
+    flex: 1;
+    width: 100px;
+}
+
+.cont_caracteristicas li {
+    line-height: 2;
+}
+
+#caracteristicas {
+    list-style-type: disc;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-bottom: 60px;
+}
+
+#caracteristicas li::marker {
+    color: var(--color-SecundarioOscuro);
+}
+
+#caracteristicas li {
+    margin-bottom: 10px;
+}
+
+.cont_tabla {
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.cont_tabla h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    color: var(--color-SecundarioOscuro);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo_td{
+    text-transform: uppercase;
+}
+
+.cont_tabla table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cont_tabla table th,
+.cont_tabla table td {
+    border: 1px solid var(--color-Negro);
+    padding: 10px;
+    text-align: left;
+}
+
+.cont_tabla table th {
+    background-color: var(--color-SecundarioOscuro);
+    color: var(--color-Negro);
+}
+
+
+ .cont_tabla {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } 
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd; 
+  }
+
+.modelos-producto .modelo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modelos-producto .modelo .info-modelo {
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre-modelo {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.precio-modelo {
+    font-size: 18px;
+    color: var(--color-SecundarioOscuro);
+    margin: 0;
+}
+
+.btn-tienda {
+    background-color: var(--color-SecundarioOscuro);
+    color: #000000;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-tienda:hover {
+    background-color: var(--color-SecundarioOscuro);
+}
+
+.info-cuotas {
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Carrusel */
+
+.carru_cont_producto {
+    width: 600px; 
+    height: 600px;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.carru_cont_img {
+    width: 600px; 
+    height: 600px;
+}
+
+.carousel-item img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 1250px) {
+    .divisiones {
+        margin: 90px 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .divisiones {
+        flex-direction: column;
+    }
+
+    .cont_carruInfo,
+    .cont_ModeloTabla,
+    .cont_AccesorioCarru {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cont_ModeloTabla>div{
+        width: 100%;
+    }
+
+    .producto h1 {
+        font-size: 2rem;
+    }
+
+    .producto p {
+        font-size: 1rem;
+        color: white;
+        font-style: italic;
+    }
+
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2rem;
+        color: var(--color-SecundarioOscuro);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    th, td {
+        font-size: 0.875rem;
+      }
+
+      .table-responsive{
+        width: 90%;
+      }
+
+      .carru_cont_producto {
+        width: 70%;
+        height: 300px; 
+        margin: 0 auto; 
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+}
+
+@media (max-width: 600px) {
+    .carru_cont_producto {
+        width: 70%; 
+        height: 300px;
+        margin: 0 auto; 
+    }
+
+    .carousel-item img {
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .modelos-producto .modelo{
+        display: flex;
+        flex-direction: column;
+      }
+}

@@ -1,0 +1,31 @@
+{
+    "Barba": [
+      {
+        "id": "MLA1119091532",
+        "nombre": "Producto 1"
+      },
+      {
+        "id": "MLA1234567890",
+        "nombre": "Producto 2"
+      }
+    ],
+    "QBO": [
+      {
+        "id": "MLA2345678901",
+        "nombre": "Producto QBO 1"
+      }
+    ],
+    "Flama": [
+      {
+        "id": "MLA3456789012",
+        "nombre": "Producto Flama 1"
+      }
+    ],
+    "Gillotina": [
+      {
+        "id": "MLA4567890123",
+        "nombre": "Producto Gillotina 1"
+      }
+    ]
+  }
+  
