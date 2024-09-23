@@ -32,6 +32,16 @@ h3{
     text-align: center;
 }
 
+ul{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
 /* Header */
 header {
     background-color: #1d0112; 
@@ -70,7 +80,7 @@ nav ul li a {
 
 /* Estilos del menú desplegable */
 .dropdown-menu {
-    background-color: black;
+    background-color: #1d0112;
     list-style-type: none;
     padding: 0;
     border-radius: 0;
@@ -88,7 +98,7 @@ nav ul li a {
     flex-direction: row;
     justify-content: center;
     opacity: 1;
-    margin-top: 10px;
+    margin-top: 15px;
     width: auto;
 }
 
@@ -125,7 +135,7 @@ nav ul li a {
 
 /* Video TODO PARRILLA */
 
-.carousel {
+.videos_carru {
     position: relative;
     width: 100%;
     height: 930px;
@@ -228,6 +238,7 @@ nav ul li a {
 
 .row{
     justify-content: space-between;
+    align-items: center;
 }
 
 .conteinerinfo h2 {
@@ -767,7 +778,14 @@ footer{
     .navbar-collapse {
         max-height: 900px; 
         overflow-y: scroll;
+        font-size: 18px;
+        margin-bottom: 10px;
     }
+
+    .navbar-collapse li{
+        margin-top: 15px;
+    }
+
     .navbar-collapse::-webkit-scrollbar {
         width: 0; 
     }

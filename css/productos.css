@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
   }
 
   body{
@@ -60,6 +59,8 @@ h2 {
     display: flex;
     flex-direction: row;
     gap: 80px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .cont_ModeloTabla>div {
@@ -84,6 +85,7 @@ h2 {
 
 #caracteristicas li {
     margin-bottom: 10px;
+    list-style-type: disc;
 }
 
 .cont_tabla {
@@ -91,13 +93,12 @@ h2 {
     padding-bottom: 80px;
 }
 
-.cont_tabla h2 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 28px;
+.accesorios_li li{
+    list-style-type: disc;
+}
+
+.accesorios_li li::marker {
     color: var(--color-SecundarioOscuro);
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 .titulo_td{
@@ -153,8 +154,8 @@ h2 {
 }
 
 .nombre-modelo {
-    font-size: 14px;
-    color: #ffffff;
+    font-size: 30px;
+    color: var(--color-SecundarioOscuro);
     margin: 0;
     margin-bottom: 5px;
 }
@@ -188,9 +189,9 @@ h2 {
 /* Carrusel */
 
 .carru_cont_producto {
-    width: 600px; 
-    height: 600px;
-    overflow: hidden;
+    aspect-ratio: 1 / 1; 
+    width: 100%;
+    max-width: 500px;
 }
 
 .carousel-inner {
@@ -201,6 +202,12 @@ h2 {
 .carru_cont_img {
     width: 600px; 
     height: 600px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
 }
 
 .carousel-item img {
