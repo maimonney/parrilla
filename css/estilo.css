@@ -220,7 +220,6 @@ nav ul li a {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
-    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -297,11 +296,6 @@ nav ul li a {
     width: 90%; 
     height: 500px; 
     margin: 0 auto; 
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../img/galeria1.jpg');
-    transition: background-image 0.5s ease-in-out;
 }
 
 .gallleryprducts {
@@ -337,7 +331,7 @@ nav ul li a {
 }
 
 .galeria-name {
-    font-size: 2vw;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
     cursor: pointer;
@@ -806,6 +800,14 @@ footer{
     .cont_res .logo_res{
         display: none;
     } 
+
+    .maingallery {
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-image: url('../img/galeria1.jpg');
+        transition: background-image 0.5s ease-in-out;
+    }
 
     .cont_res div ul{
         list-style-type: none;
