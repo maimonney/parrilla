@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    
 
     <header id="header">
         <script src="js-json/scripts.js" defer></script>
@@ -87,239 +86,398 @@
 
         <section class="videos">
             <!-- Carru video -->
-            <div id="carouselExampleIndicators" class="carousel slide videos_carru">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                </div>
+            <div id="carouselExampleIndicators" class="video_fondo">
 
                 <div class="content1">
-                    <img src="img/Titulobarba.png" alt="Todo Parrilla" class="logo-parrilla2">
+                    <img src="img/Tituloflama.png" alt="Todo Parrilla" class="logo-parrilla2">
                 </div>
 
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <video src="img/v1.mp4" autoplay muted loop playsinline></video>
                     </div>
-                    <div class="carousel-item">
-                        <video src="img/v1.mp4" autoplay muted loop playsinline></video>
-                    </div>
                 </div>
             </div>
 
         </section>
 
 
+
+
+ 
+        <section class="cards">
+            <article class="card" id="barba1">
+                <div class="card__img">
+                    <img id="imgBarba1" src="img/barba_abierto1.jpg" alt="Barba 1" />
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Familia Barba</span>
+                    <h3 class="card__title">Barba 1</h3>
+                </div>
+            </article>
+        
+            <article class="card" id="barba2">
+                <div class="card__img">
+                    <img id="imgBarba2" src="img/barba_abierto2.jpg" alt="Barba 2" />
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Familia Barba</span>
+                    <h3 class="card__title">Barba 2</h3>
+                </div>
+            </article>
+        
+            <article class="card" id="barba3">
+                <div class="card__img">
+                    <img id="imgBarba3" src="img/barba_abierto3.jpg" alt="Barba 3" />
+                </div>
+                <div class="card__info">
+                    <span class="card__category">Familia Barba</span>
+                    <h3 class="card__title">Barba 3</h3>
+                </div>
+            </article>
+        </section>
+        
+
+
+        <!-- Qbo carbon -->
         <section class="divisiones">
-            <div class="cont_carruInfo">
-                <!-- Primer carru -->
-                <div id="carouselExampleIndicators2" class="carousel slide carru_cont_producto">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
-                    </div>
-    
-                    <div class="carousel-inner carru_cont_img">
-                        <div class="carousel-item active">
-                            <img src="img/barba1.jpg" class="d-block w-100" alt="Imagen 1">
-                        </div>                        
-                        <div class="carousel-item">
-                            <img src="img/barba2.png" class="d-block w-100" alt="Imagen 2">
+            <!-- Contenedor de carrusel y tabla al lado derecho -->
+            <div class="contenedor-principal" id="b1">
+                <!-- Carrusel a la izquierda -->
+                <div class="cont_carruInfo">
+                    <div class="con_carru">
+                        <h1>Qbo a carbón</h1>
+                    <div id="carouselExampleIndicators1" class="carousel slide carru_cont_producto">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="3" aria-label="Slide 4"></button>
                         </div>
-                        <div class="carousel-item">
-                            <img src="img/barba3.jpg" class="d-block w-100" alt="Imagen 3">
+        
+                        <div class="carousel-inner carru_cont_img">
+                            <div class="carousel-item active">
+                                <img src="img/barba1.jpg" class="d-block w-100" alt="Imagen 1">
+                            </div>                        
+                            <div class="carousel-item">
+                                <img src="img/barba2.png" class="d-block w-100" alt="Imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/barba3.jpg" class="d-block w-100" alt="Imagen 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/barba4.jpg" class="d-block w-100" alt="Imagen 4">
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="img/barba4.jpg" class="d-block w-100" alt="Imagen 4">
-                        </div>
+        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-    
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <!-- Items -->
-                <div class="cont_ItemModelo">
-                    <div class="cont_caracteristicas">
-                        <h2>Barba Argentina</h2>
-                        <ul id="caracteristicas">
-                            <li>Estructura en chapa de hierro N°20 de 9mm de espesor.</li>
-                            <li>Reforzada en los bordes con planchuela de 3,2mm de espesor.</li>
-                            <li>Patas construidas en caño estructural soldado, fogón y mesada extraíbles.</li>
-                            <li>Carrocería pintada con pintura electrostática en polvo e-poxi híbrida de poliéster que
-                                da un acabado parejo, prolijo y durable.</li>
-                            <li>Herraje interno en hierro ángulo enlozado de 5/8 x 1/8 con cadenas de eslabón soldados
-                                zincadas.</li>
-                            <li>Ruedas industriales de PVC giratorias a rulemán con freno.</li>
-                        </ul>
                     </div>
-                </div>
-            </div>
-
-            <div class="cont_ModeloTabla">
-                <!-- Modelos -->
-                <div class="modelos-producto">
-                    <h2>Selecciona el modelo que querés</h2>
-                    <div class="modelo">
+                    <div class="link_precio">
                         <div class="info-modelo">
-                            <p class="nombre-modelo">Modelo N°1</p>
-                            <p data-item-id="MLA862170267">
+                            <p data-item-id="MLA1114670973">
                                 <span class="precio-modelo"></span>
                             </p>
                         </div>
-                        <a class="btn-tienda" href="https://todoparrillas.mercadoshops.com.ar/MLA-862170267-parrilla-con-tapa-barba-n1-con-fogon-y-mesada-_JM#position%3D2%26search_layout%3Dgrid%26type%3Ditem%26tracking_id%3D5f9fab86-cf96-4ff2-9773-41f512aeb109" target="_blank">Ir a la tienda</a>
-                    </div>
-                    <div class="modelo">
-                        <div class="info-modelo">
-                            <p class="nombre-modelo">Modelo N°2</p>
-                            <p data-item-id="MLA862170158">
-                                <span class="precio-modelo"></span>
-                            </p>
-                        </div>
-                        <a class="btn-tienda" href="https://todoparrillas.mercadoshops.com.ar/MLA-862170158-parrilla-con-tapa-barba-n2-con-fogon-y-mesada-_JM?searchVariation=57965461130#searchVariation=57965461130&position=1&search_layout=grid&type=item&tracking_id=45f9333f-386a-4582-bf72-28dc974ab28c" target="_blank">Ir a la tienda</a>
-                    </div>
-                    <div class="modelo">
-                        <div class="info-modelo">
-                            <p class="nombre-modelo">Modelo N°3</p>
-                            <p data-item-id="MLA862171332">
-                                <span class="precio-modelo"></span>
-                            </p>
-                        </div>
-                        <a class="btn-tienda" href="https://todoparrillas.mercadoshops.com.ar/MLA-862171332-parrilla-con-tapa-barba-n3-con-fogon-y-mesada-_JM#position%3D6%26search_layout%3Dgrid%26type%3Ditem%26tracking_id%3D50ac319a-fbc9-4c65-8692-de1ab98d9aa5" target="_blank">Ir a la tienda</a>
-                    </div>
-                    <p class="info-cuotas">Pagalo hasta en 3 cuotas sin interés</p>
+                        <a class="btn-tienda" href="https://todoparrillas.mercadoshops.com.ar/MLA-1114670973-parrilla-portatil-a-carbon-qbot-con-fogon-y-mesada-_JM#position%3D2%26search_layout%3Dstack%26type%3Ditem%26tracking_id%3Dbc3cb3c9-b5e5-4eaa-b7f1-ed97088819ec" target="_blank">Ir a la tienda</a>
+                    </div>   
                 </div>
-                <!-- Tabla -->
+        
+                <!-- Tabla al lado derecho del carrusel -->
                 <div class="cont_tabla">
-                    <h2>Medidas con fogón y mesada</h2>
+                    <h2>Información técnica</h2>
                     <div class="table-responsive">
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th>N°1</th>
-                            <th>N°2</th>
-                            <th>N°3</th>
-                        </tr>
-                        <tr>
-                            <td class="titulo_td">Alto</td>
-                            <td>125cm</td>
-                            <td>125cm</td>
-                            <td>125cm</td>
-                        </tr>
-                        <tr>
-                            <td class="titulo_td">Ancho</td>
-                            <td>140cm</td>
-                            <td>165cm</td>
-                            <td>190cm</td>
-                        </tr>
-                        <tr>
-                            <td class="titulo_td">Profundidad</td>
-                            <td>55cm</td>
-                            <td>55cm</td>
-                            <td>55cm</td>
-                        </tr>
-                        <tr>
-                            <td class="titulo_td">Herraje</td>
-                            <td>60 x 45cm</td>
-                            <td>80 x 45cm</td>
-                            <td>80 x 45cm</td>
-                        </tr>
-                    </table>
-                </div></div>
-            </div>
-
-            <div class="cont_AccesorioCarru">
-                <!-- Accesorios -->
-                <div class="modelos-producto">
-                    <h2>Accesorios especiales y a medida</h2>
-                    <div class="modelo">
-                        <div class="info-modelo">
-                            <p class="nombre-modelo">Plancha lisa sobre fogón</p>
-                            <p data-item-id="MLA863897337">
-                                <span class="precio-modelo"></span>
-                            </p>
-                        </div>
-                        <a class="btn-tienda" href="https://todoparrillas.mercadoshops.com.ar/MLA-863897337-plancha-lisa-sobre-fogon-_JM" target="_blank">Ir a la tienda</a>
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Alto</td>
+                                <td>120cm</td>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Ancho</td>
+                                <td>155cm</td>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Profundidad</td>
+                                <td>55cm</td>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Herraje</td>
+                                <td>75 x 45cm</td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="modelo">
-                        <div class="info-modelo">
-                            <p class="nombre-modelo">Faldón de planchuela</p>
-                            <p data-item-id="MLA1114080845">
-                                <span class="precio-modelo"></span>
-                            </p>
-                        </div>
-                        <a class="btn-tienda" href="https://todoparrillas.mercadoshops.com.ar/MLA-1114080845-faldon-de-planchuela-_JM" target="_blank">Ir a la tienda</a>
-                    </div>
-                    <div class="modelo">
-                        <div class="info-modelo">
-                            <p class="nombre-modelo">Brasero de hierro</p>
-                            <p data-item-id="MLA1119091532">
-                                <span class="precio-modelo"></span>
-                            </p>
-                        </div>
-                        <a class="btn-tienda" href="https://todoparrillas.mercadoshops.com.ar/MLA-1119091532-brasero-de-hierro-_JM" target="_blank">Ir a la tienda</a>
-                    </div>
-                    <p class="info-cuotas">Págalo hasta en 3 cuotas sin interés</p>
                 </div>
-                <!-- Segundo carrusel -->
-                <div id="carouselExampleIndicators3" class="carousel slide carru_cont_producto">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
+            </div>
+        </section>
+
+        <!-- Qbo a gas -->
+        <section class="divisiones">
+            <!-- Contenedor de carrusel y tabla al lado derecho -->
+            <div class="contenedor-principal cont_p_reverse" id="b2">
+                <!-- Carrusel a la izquierda -->
+                <div class="cont_carruInfo">
+                    <div class="con_carru">
+                        <h1>Qbo a gas</h1>
+                    <div id="carouselExampleIndicators2" class="carousel slide carru_cont_producto">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+        
+                        <div class="carousel-inner carru_cont_img">
+                            <div class="carousel-item active">
+                                <img src="img/barba1.jpg" class="d-block w-100" alt="Imagen 1">
+                            </div>                        
+                            <div class="carousel-item">
+                                <img src="img/barba2.png" class="d-block w-100" alt="Imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/barba3.jpg" class="d-block w-100" alt="Imagen 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/barba4.jpg" class="d-block w-100" alt="Imagen 4">
+                            </div>
+                        </div>
+        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-    
-                    <div class="carousel-inner carru_cont_img">
-                        <div class="carousel-item active">
-                            <img src="img/barba1.jpg" class="d-block w-100" alt="Imagen 1">
-                        </div>                        
-                        <div class="carousel-item">
-                            <img src="img/barba2.png" class="d-block w-100" alt="Imagen 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/barba3.jpg" class="d-block w-100" alt="Imagen 3">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/barba4.jpg" class="d-block w-100" alt="Imagen 4">
-                        </div>
                     </div>
-    
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    <div class="link_precio">
+                        <div class="info-modelo">
+                            <p data-item-id="MLA1114670973">
+                                <span class="precio-modelo"></span>
+                            </p>
+                        </div>
+                        <a class="btn-tienda" href="https://todoparrillas.mercadoshops.com.ar/MLA-1114670973-parrilla-portatil-a-carbon-qbot-con-fogon-y-mesada-_JM#position%3D2%26search_layout%3Dstack%26type%3Ditem%26tracking_id%3Dbc3cb3c9-b5e5-4eaa-b7f1-ed97088819ec" target="_blank">Ir a la tienda</a>
+                    </div>   
+                </div>
+        
+                <!-- Tabla al lado derecho del carrusel -->
+                <div class="cont_tabla">
+                    <h2>Información técnica</h2>
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Alto</td>
+                                <td>120cm</td>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Ancho</td>
+                                <td>155cm</td>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Profundidad</td>
+                                <td>55cm</td>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Herraje</td>
+                                <td>75 x 45cm</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QboT -->
+        <section class="divisiones">
+            <!-- Contenedor de carrusel y tabla al lado derecho -->
+            <div class="contenedor-principal" id="b3">
+                <!-- Carrusel a la izquierda -->
+                <div class="cont_carruInfo">
+                    <div class="con_carru">
+                        <h1>Qbot a carbón</h1>
+                    <div id="carouselExampleIndicators3" class="carousel slide carru_cont_producto">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+        
+                        <div class="carousel-inner carru_cont_img">
+                            <div class="carousel-item active">
+                                <img src="img/barba1.jpg" class="d-block w-100" alt="Imagen 1">
+                            </div>                        
+                            <div class="carousel-item">
+                                <img src="img/barba2.png" class="d-block w-100" alt="Imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/barba3.jpg" class="d-block w-100" alt="Imagen 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/barba4.jpg" class="d-block w-100" alt="Imagen 4">
+                            </div>
+                        </div>
+        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    </div>
+                    <div class="link_precio">
+                        <div class="info-modelo">
+                            <p data-item-id="MLA1114670973">
+                                <span class="precio-modelo"></span>
+                            </p>
+                        </div>
+                        <a class="btn-tienda" href="https://todoparrillas.mercadoshops.com.ar/MLA-1114670973-parrilla-portatil-a-carbon-qbot-con-fogon-y-mesada-_JM#position%3D2%26search_layout%3Dstack%26type%3Ditem%26tracking_id%3Dbc3cb3c9-b5e5-4eaa-b7f1-ed97088819ec" target="_blank">Ir a la tienda</a>
+                    </div>   
+                </div>
+        
+                <!-- Tabla al lado derecho del carrusel -->
+                <div class="cont_tabla">
+                    <h2>Información técnica</h2>
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Alto</td>
+                                <td>120cm</td>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Ancho</td>
+                                <td>155cm</td>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Profundidad</td>
+                                <td>55cm</td>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Herraje</td>
+                                <td>75 x 45cm</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
 
 
-        <!-- Botones flotantes -->
+        <section class="contQbo1">
+            <h2>Accesorios especiales y a medida</h2>
+            <p>Págalo hasta en 3 cuotas sin interés</p>
+        </section>
+
+
+
+        <!-- Accesorios Especiales y a medida -->
+        <section class="divisiones">
+            <!-- Contenedor de carrusel y tabla al lado derecho -->
+            <div class="contenedor-principal" id="qbo-c">
+                <!-- Carrusel a la izquierda -->
+                <div class="cont_carruInfo">
+                    <div class="con_carru">
+                        <h1>Qbo a carbón</h1>
+                    <div id="carouselExampleIndicators5" class="carousel slide carru_cont_producto">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+        
+                        <div class="carousel-inner carru_cont_img">
+                            <div class="carousel-item active">
+                                <img src="img/barba1.jpg" class="d-block w-100" alt="Imagen 1">
+                            </div>                        
+                            <div class="carousel-item">
+                                <img src="img/barba2.png" class="d-block w-100" alt="Imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/barba3.jpg" class="d-block w-100" alt="Imagen 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/barba4.jpg" class="d-block w-100" alt="Imagen 4">
+                            </div>
+                        </div>
+        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    </div>
+                    <div class="link_precio">
+                        <div class="info-modelo">
+                            <p data-item-id="MLA1114670973">
+                                <span class="precio-modelo"></span>
+                            </p>
+                        </div>
+                        <a class="btn-tienda" href="https://todoparrillas.mercadoshops.com.ar/MLA-1114670973-parrilla-portatil-a-carbon-qbot-con-fogon-y-mesada-_JM#position%3D2%26search_layout%3Dstack%26type%3Ditem%26tracking_id%3Dbc3cb3c9-b5e5-4eaa-b7f1-ed97088819ec" target="_blank">Ir a la tienda</a>
+                    </div>   
+                </div>
+        
+                <!-- Tabla al lado derecho del carrusel -->
+                <div class="cont_tabla">
+                    <h2>Información técnica</h2>
+                    <div class="table-responsive">
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Alto</td>
+                                <td>120cm</td>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Ancho</td>
+                                <td>155cm</td>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Profundidad</td>
+                                <td>55cm</td>
+                            </tr>
+                            <tr>
+                                <td class="titulo_td">Herraje</td>
+                                <td>75 x 45cm</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        
         <div class="floating-container">
             <div class="floating-button">+</div>
             <div class="element-container">

@@ -184,11 +184,17 @@ dropdownItems.forEach(function(item) {
 
 
 
-
+// ------------------------------------------------------Esto causa error
 // Función para cambiar las imágenes al hacer hover
 function cambiarImagenAlHover(id, imgAbierto, imgCerrado) {
     const imagen = document.getElementById(id);
-     
+    
+    // Verificamos que la imagen exista
+    if (!imagen) {
+        console.error(`Elemento con ID "${id}" no encontrado.`);
+        return;
+    }
+
     imagen.addEventListener('mouseover', function() {
         imagen.src = imgCerrado; // Cambia a la imagen "cerrado"
     });
@@ -204,25 +210,177 @@ cambiarImagenAlHover('img2', 'img/abierto2.jpg', 'img/cerrado2.jpg');
 cambiarImagenAlHover('img3', 'img/abierto3.jpg', 'img/cerrado3.jpg');
 cambiarImagenAlHover('img4', 'img/abierto4.jpg', 'img/cerrado4.jpg');
 
-document.getElementById('qbo-carbon').addEventListener('click', function() {
-    const section = document.getElementById('qbo-c');
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
+//QBO
+const qboCarbon = document.getElementById('qbo-carbon');
+if (qboCarbon) {
+    qboCarbon.addEventListener('click', function() {
+        const section = document.getElementById('qbo-c');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            console.error('Sección "qbo-c" no encontrada.');
+        }
+    });
+}
 
-document.getElementById('qbo-gas').addEventListener('click', function() {
-    const section = document.getElementById('qbo-g');
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
+const qboGas = document.getElementById('qbo-gas');
+if (qboGas) {
+    qboGas.addEventListener('click', function() {
+        const section = document.getElementById('qbo-g');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            console.error('Sección "qbo-g" no encontrada.');
+        }
+    });
+}
 
-document.getElementById('qbot-card').addEventListener('click', function() {
-    const section = document.getElementById('qbot-c');
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
+const qbotCard = document.getElementById('qbot-card');
+if (qbotCard) {
+    qbotCard.addEventListener('click', function() {
+        const section = document.getElementById('qbot-c');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            console.error('Sección "qbot-c" no encontrada.');
+        }
+    });
+}
 
-document.getElementById('qbit-card').addEventListener('click', function() {
-    const section = document.getElementById('qbito');
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
+const qbitCard = document.getElementById('qbit-card');
+if (qbitCard) {
+    qbitCard.addEventListener('click', function() {
+        const section = document.getElementById('qbito');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            console.error('Sección "qbito" no encontrada.');
+        }
+    });
+}
+
+
+function cambiarImagenAlHover(id, imgAbierto, imgCerrado) {
+    const imagen = document.getElementById(id);
+    
+    // Verificamos que la imagen exista
+    if (!imagen) {
+        console.error(`Elemento con ID "${id}" no encontrado.`);
+        return;
+    }
+
+    imagen.addEventListener('mouseover', function() {
+        imagen.src = imgCerrado; // Cambia a la imagen "cerrado"
+    });
+
+    imagen.addEventListener('mouseout', function() {
+        imagen.src = imgAbierto; // Vuelve a la imagen "abierto"
+    });
+}
+
+
+cambiarImagenAlHover('imgFlama1', 'img/flama_abierto1.jpg', 'img/flama_cerrado1.jpg');
+cambiarImagenAlHover('imgFlama2', 'img/flama_abierto2.jpg', 'img/flama_cerrado2.jpg');
+cambiarImagenAlHover('imgFlama3', 'img/flama_abierto3.jpg', 'img/flama_cerrado3.jpg');
+
+
+const flama1 = document.getElementById('flama1');
+if (flama1) {
+    flama1.addEventListener('click', function() {
+        const section = document.getElementById('f1');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            console.error('Sección "f1" no encontrada.');
+        }
+    });
+}
+
+const flama2 = document.getElementById('flama2');
+if (flama2) {
+    flama2.addEventListener('click', function() {
+        const section = document.getElementById('f2');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            console.error('Sección "f2" no encontrada.');
+        }
+    });
+}
+
+const flama3 = document.getElementById('flama3');
+if (flama3) {
+    flama3.addEventListener('click', function() {
+        const section = document.getElementById('f3');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            console.error('Sección "f3" no encontrada.');
+        }
+    });
+}
+
+function cambiarImagenAlHover(id, imgAbierto, imgCerrado) {
+    const imagen = document.getElementById(id);
+    
+    // Verificamos que la imagen exista
+    if (!imagen) {
+        console.error(`Elemento con ID "${id}" no encontrado.`);
+        return;
+    }
+
+    imagen.addEventListener('mouseover', function() {
+        imagen.src = imgCerrado; // Cambia a la imagen "cerrado"
+    });
+
+    imagen.addEventListener('mouseout', function() {
+        imagen.src = imgAbierto; // Vuelve a la imagen "abierto"
+    });
+}
+
+// Aplicamos la función a cada una de las imágenes de la familia Barba
+cambiarImagenAlHover('imgBarba1', 'img/barba_abierto1.jpg', 'img/barba_cerrado1.jpg');
+cambiarImagenAlHover('imgBarba2', 'img/barba_abierto2.jpg', 'img/barba_cerrado2.jpg');
+cambiarImagenAlHover('imgBarba3', 'img/barba_abierto3.jpg', 'img/barba_cerrado3.jpg');
+
+// Eventos de clic para las tarjetas de familia Barba
+const barba1 = document.getElementById('barba1');
+if (barba1) {
+    barba1.addEventListener('click', function() {
+        const section = document.getElementById('b1');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            console.error('Sección "b1" no encontrada.');
+        }
+    });
+}
+
+const barba2 = document.getElementById('barba2');
+if (barba2) {
+    barba2.addEventListener('click', function() {
+        const section = document.getElementById('b2');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            console.error('Sección "b2" no encontrada.');
+        }
+    });
+}
+
+const barba3 = document.getElementById('barba3');
+if (barba3) {
+    barba3.addEventListener('click', function() {
+        const section = document.getElementById('b3');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            console.error('Sección "b3" no encontrada.');
+        }
+    });
+}
+
+
 
 
 //Obtener precios
