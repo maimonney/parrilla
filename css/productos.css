@@ -2,141 +2,295 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+    user-select: none; /* Para evitar la selección de texto */
+    -webkit-user-select: none; /* Para Safari */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para Internet Explorer */
+}
 
-  body{
+body {
     background-color: var(--color-PrimarioOscuro);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+}
 
-.producto {
+.cards {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 500px;
+    flex-wrap: wrap;
+    gap: 70px; /* Espacio entre las tarjetas */
+    max-width: 1200px;
+    margin: 50px auto 0;
+    user-select: none; /* Para evitar la selección de texto */
+    -webkit-user-select: none; /* Para Safari */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para Internet Explorer */
 }
 
-.producto h1 {
-    font-size: 3rem;
-    color: white;
+.card {
+    width: 20%; /* Ajuste del tamaño para que las 4 tarjetas quepan bien */
+    background-color: var(--color-Secundario);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    margin-bottom: 30px; /* Añade espacio inferior para asegurar uniformidad */
+    border: 2px solid transparent; /* Solución al borde blanco */
 }
 
-.producto p {
-    font-size: 1.2rem;
-    color: white;
-    font-style: italic;
+.card__img {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-h2 {
-    font-family: 'VarsityTeam'; 
-    src: url('../font/VarsityTeam-Bold.otf') format('opentype');
-    font-size: 42px;
-    color: var(--color-SecundarioOscuro);
+.card__info {
+    padding: 16px 24px;
+    background-color: var(--color-Secundario);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: background-color 0.4s ease;
+}
+
+.card__title {
+    margin-top: 5px;
+    font-family: 'VarsityTeam';
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card__category {
+    font-family: 'VarsityTeam';
     text-transform: uppercase;
-    margin-bottom: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 500;
 }
 
+
+/* Efecto hover */
+.card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}
+
+.card:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.10, 1.10);
+}
+
+.card__img--hover {
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    top: 0;
+}
+
+.card__info-hover {
+    position: absolute;
+    padding: 16px;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+}
+
+
+/* Distribución principal */
 .divisiones {
     display: flex;
-    flex-wrap: wrap;
-    color: #ffffff;
-    padding-top: 20px;
-    margin: 90px 150px;
-    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
+.contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    gap: 40px;
+}
+
+.cont_p_reverse{
+    flex-direction: row-reverse;
+}
+
+.link_precio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+.precio-modelo {
+    font-size: 40px;
+    text-align: center;
+    color: #e0d19c;
+    margin: 0;
+    font-family: 'VarsityTeam', sans-serif;
+    letter-spacing: 2px;
+}
+
+.precio-modelo p{
+margin: 0;
+}
+
+/* Tabla */
+.cont_tabla {
+    font-family: 'VarsityTeam', sans-serif;
+    text-align: center;
+    width: 600px;
+}
+
+.cont_tabla h2 {
+    font-size: 3em;
+    color: #e0d19c;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.table-responsive {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2b0220;
+    border: 1px solid #4d0d3b;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+th, td {
+    letter-spacing: 1px;
+    user-select: none;
+    padding: 18px;
+    font-size: 1.3em;
+    color: #e0d19c;
+    border-bottom: 1px solid #4d0d3b;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+th {
+    background-color: #4d0d3b;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid #e0d19c;
+}
+
+td.titulo_td {
+    font-weight: bold;
+    background-color: #381630;
+}
+
+tr:hover td {
+    background-color: #4d0d3b;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Carrusel */
 .cont_carruInfo,
 .cont_ModeloTabla {
-    flex: 1 1 100%;
     display: flex;
     flex-direction: column;
 }
 
-.cont_carruInfo,
-.cont_ModeloTabla,
-.cont_AccesorioCarru {
+.con_carru {
     display: flex;
-    flex-direction: row;
-    gap: 80px;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
-.cont_ModeloTabla>div {
-    flex: 1;
-    width: 100px;
-}
-
-.cont_caracteristicas li {
-    line-height: 2;
-}
-
-#caracteristicas {
-    list-style-type: disc;
-    margin-bottom: 50px;
-    padding-left: 20px;
-    padding-bottom: 60px;
-}
-
-#caracteristicas li::marker {
-    color: var(--color-SecundarioOscuro);
-}
-
-#caracteristicas li {
-    margin-bottom: 10px;
-    list-style-type: disc;
-}
-
-.cont_tabla {
+.carru_cont_producto {
+    aspect-ratio: 1 / 1;
     width: 100%;
-    padding-bottom: 80px;
+    max-width: 500px;
+    border: 3px solid #e0d19c;
 }
 
-.accesorios_li li{
-    list-style-type: disc;
+.carousel-inner {
+    width: 100%;
+    height: 100%;
 }
 
-.accesorios_li li::marker {
+.carru_cont_img {
+    width: 450px;
+    height: 450px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Títulos */
+.divisiones h1 h2 {
+    align-items: flex-start;
+}
+
+h1, h2 {
+    font-family: 'VarsityTeam';
+    src: url('../font/VarsityTeam-Bold.otf') format('opentype');
     color: var(--color-SecundarioOscuro);
-}
-
-.titulo_td{
     text-transform: uppercase;
 }
 
-.cont_tabla table {
-    width: 100%;
-    border-collapse: collapse;
+h1 {
+    font-size: 3.3em;
     margin-bottom: 20px;
 }
 
-.cont_tabla table th,
-.cont_tabla table td {
-    border: 1px solid var(--color-Negro);
-    padding: 10px;
-    text-align: left;
-}
-
-.cont_tabla table th {
-    background-color: var(--color-SecundarioOscuro);
-    color: var(--color-Negro);
-}
-
-
- .cont_tabla {
+/* Modelo y botón debajo del carrusel */
+.cont_ModeloTabla {
+    margin-top: 20px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  } 
-  
-  th, td {
-    padding: 8px;
-    text-align: left;
-    border: 1px solid #ddd; 
-  }
+}
 
 .modelos-producto .modelo {
     display: flex;
@@ -156,14 +310,7 @@ h2 {
 .nombre-modelo {
     font-size: 30px;
     color: var(--color-SecundarioOscuro);
-    margin: 0;
-    margin-bottom: 5px;
-}
-
-.precio-modelo {
-    font-size: 18px;
-    color: var(--color-SecundarioOscuro);
-    margin: 0;
+    margin: 0 0 5px;
 }
 
 .btn-tienda {
@@ -179,6 +326,25 @@ h2 {
     background-color: var(--color-SecundarioOscuro);
 }
 
+/* Características y listas */
+.cont_caracteristicas li,
+#accesorios_li li {
+    line-height: 2;
+}
+
+#caracteristicas,
+#accesorios_li {
+    list-style-type: disc;
+    margin-bottom: 50px;
+    padding-left: 20px;
+}
+
+#caracteristicas li::marker,
+#accesorios_li li::marker {
+    color: var(--color-SecundarioOscuro);
+}
+
+/* Información adicional */
 .info-cuotas {
     font-size: 16px;
     color: #ffffff;
@@ -186,38 +352,62 @@ h2 {
     text-align: left;
 }
 
-/* Carrusel */
 
-.carru_cont_producto {
-    aspect-ratio: 1 / 1; 
-    width: 100%;
-    max-width: 500px;
+
+
+
+
+.contQbo1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(2,0,36,0) 0%, rgba(0,0,0,1) 100%), url('../img/f1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    user-select: none; /* Evita la selección de texto */
+    -webkit-user-select: none; /* Para Safari */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para Internet Explorer */
 }
 
-.carousel-inner {
-    width: 100%;
-    height: 100%;
+.contQbo1 h2 {
+    font-family: 'VarsityTeam', sans-serif;
+    font-size: 3rem;
+    color: white;
 }
 
-.carru_cont_img {
-    width: 600px; 
-    height: 600px;
-}
-
-.carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden; 
-}
-
-.carousel-item img {
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
+.contQbo1 p {
+    font-size: 1.2rem;
+    color: white;
+    font-style: italic;
 }
 
 
-@media (max-width: 1250px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width: 1250px) {
     .divisiones {
         margin: 90px 20px;
     }
@@ -236,7 +426,7 @@ h2 {
         width: 100%;
     }
 
-    .cont_ModeloTabla>div{
+    .cont_ModeloTabla > div {
         width: 100%;
     }
 
@@ -257,45 +447,25 @@ h2 {
         text-transform: uppercase;
         margin-bottom: 10px;
     }
-    th, td {
-        font-size: 0.875rem;
-      }
+}
 
-      .table-responsive{
-        width: 90%;
-      }
-
-      .carru_cont_producto {
+@media (max-width: 600px) {
+    .carru_cont_producto {
         width: 70%;
-        height: 300px; 
-        margin: 0 auto; 
+        height: 300px;
+        margin: 0 auto;
     }
 
     .carousel-item img {
         width: 100%;
         height: 100%;
-        object-fit: cover; 
+        object-fit: cover;
     }
 }
-
-@media (max-width: 600px) {
-    .carru_cont_producto {
-        width: 70%; 
-        height: 300px;
-        margin: 0 auto; 
-    }
-
-    .carousel-item img {
-        width: 100%; 
-        height: 100%; 
-        object-fit: cover; 
-    }
-}
-
 
 @media screen and (max-width: 500px) {
-    .modelos-producto .modelo{
+    .modelos-producto .modelo {
         display: flex;
         flex-direction: column;
-      }
-}
+    }
+} */

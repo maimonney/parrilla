@@ -78,9 +78,38 @@ nav ul li a {
     padding: 14px 20px;
 }
 
-/* Estilos del menú desplegable */
+
+
+/* Estilos para las imágenes de los títulos (siempre visibles) */
+.dropdown-item img:first-child {
+    width: auto;
+    height: 100px; /* Ajusta la altura según tus necesidades */
+    object-fit: contain;
+    margin-bottom: 10px;
+    z-index: 3; /* Asegura que la imagen del título quede por encima del fondo */
+    position: relative; /* Siempre visible */
+    opacity: 1; /* No desaparece */
+    transition: none; /* Sin transición en hover */
+}
+
+/* Mantener las imágenes de los productos con animación */
+.producto-img {
+    width: 288px;
+    height: 174px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: inset(100% 100% 100% 100%);
+    z-index: 1; /* Imagen del producto por debajo */
+    opacity: 0;
+    transition: clip-path 0.5s ease, opacity 0.5s ease; /* Transición ajustada */
+}
+
+/* Fondo negro y centrar el texto */
 .dropdown-menu {
-    background-color: #1d0112;
+    background-color: #1d0112;  /* Fondo oscuro */
     list-style-type: none;
     padding: 0;
     border-radius: 0;
@@ -88,49 +117,104 @@ nav ul li a {
     opacity: 0;
     transition: max-height 0.5s ease-out, opacity 0.3s ease-in-out;
     overflow: hidden;
-    width: 100%;   
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #producto-menu.show {
+    width: 1200px;
+    height: 174px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     opacity: 1;
-    margin-top: 15px;
+    margin-top: 25px;
     width: auto;
 }
 
+/* Estilos de los cuadros de la barra de productos */
 .dropdown-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25px; 
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    width: 288px;
+    height: 174px;
+    background-color: #1d0112;
+    position: relative;
+    padding: 15px;
+    overflow: hidden;
     text-align: center;
-    color: white; 
-    width: 200px;
-    height: 250px;
+    color: white;
+    margin: 0 10px;
+    border: none; /* Eliminar el borde */
+    z-index: 2; /* Ajustar para evitar superposición indeseada */
 }
 
-.dropdown-item span {
-    font-size: 16px;
-    margin-bottom: 10px; 
-    font-weight: 800;
+/* Mantener la imagen del título visible sin cambio */
+.dropdown-item img:first-child {
+    z-index: 3; /* Asegura que el título siempre quede por encima */
+    position: relative;
+    transition: none; /* Sin animación */
 }
 
-.dropdown-item img {
-    width: 150px; 
-    height: auto;
-    object-fit: contain; 
+/* Animar la imagen del producto al hacer hover */
+.dropdown-item:hover .producto-img {
+    clip-path: inset(0 0 0 0);
+    opacity: 1; /* Mostrar la imagen */
+    transition: clip-path 0.5s ease, opacity 0.5s ease; /* Transición más rápida */
 }
 
-.dropdown-item:hover {
-    background-color: #686868;
-    color: var(--color-Primario);
+/* Al salir del hover, animar la imagen inversamente */
+.dropdown-item .producto-img.hover-out {
+    clip-path: inset(100% 100% 100% 100%);
+    opacity: 0; /* Ocultar imagen */
+    transition: clip-path 0.5s ease, opacity 0.5s ease; /* Suavizar la salida */
 }
+
+/* Fondo semitransparente sobre la imagen del producto */
+.dropdown-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 1, 18, 0.5); /* Color de fondo con 50% de opacidad */
+    z-index: 2; /* Fondo detrás del título y delante de la imagen del producto */
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease; /* Transición más rápida */
+}
+
+/* Mostrar el fondo semitransparente al hacer hover */
+.dropdown-item:hover::after {
+    opacity: 1;
+}
+
+/* Animación de entrada desde el centro */
+@keyframes square-in-center {
+  from {
+    clip-path: inset(100% 100% 100% 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Animación de salida hacia el centro */
+@keyframes square-out-center {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(100% 100% 100% 100%);
+  }
+}
+
+
+
+
+
+
 
 
 /* Video TODO PARRILLA */
@@ -138,7 +222,7 @@ nav ul li a {
 .videos_carru {
     position: relative;
     width: 100%;
-    height: 930px;
+    height: 955px;
     overflow: hidden; 
 }
 
@@ -156,24 +240,7 @@ nav ul li a {
     border: 0; 
 }
 
-.linea_texto{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.linea_texto hr {
-    border: none;
-    border: 1px solid #ffffff; 
-    flex-grow: 1; 
-    width: 200px;
-    margin: 0 20px 20px 20px;
-}
-
-.linea_texto p {
-    white-space: nowrap;
-    font-style: italic; 
-}
 
 .descripcion{
     display: flex;
@@ -202,19 +269,18 @@ nav ul li a {
     max-width: 100%; 
 }
 
-.content1 h2 {
-    font-family: 'VarsityTeam', sans-serif;
-    font-size: 6rem;
-    font-weight: bold;
-    letter-spacing: 0.6em;
-    margin: 0;
-    text-transform: uppercase;
-    color: white;
+.logo-parrilla2 {
+    width: 950px; 
+    height: auto; 
+    max-width: 100%; 
 }
+
 
 /* CONTENEDORES */
 
 .conteinerinfo {
+    width: 1920px;
+    height: 500px;
     margin-bottom: 10px;
     margin-top: 30px;
     opacity: 0;
@@ -244,12 +310,20 @@ nav ul li a {
     font-size: 36px;
     text-align: center;
     font-family: 'VarsityTeam', sans-serif;
+    user-select: none; /* Para evitar la selección de texto */
+    -webkit-user-select: none; /* Para Safari */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para Internet Explorer */
 }
 
 .conteinerinfo p {
     font-size: 18px;
     margin-bottom: 10px;
     text-align: center;
+    user-select: none; /* Para evitar la selección de texto */
+    -webkit-user-select: none; /* Para Safari */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para Internet Explorer */
 }
 
 .cont_info{
@@ -337,6 +411,7 @@ nav ul li a {
     cursor: pointer;
     transition: color 0.3s ease;
     text-align: center;
+    text-decoration: none;
 }
 
 .separator {
@@ -350,6 +425,7 @@ nav ul li a {
 }
 
 
+
 /* Contenedor Tienda */
 
 
@@ -358,7 +434,7 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: linear-gradient(rgba(2,0,36,0) 0%, rgba(0,0,0,1) 100%), url('../img/p1.jpg');
+    background-image: linear-gradient(rgba(2,0,36,0) 0%, rgba(0,0,0,1) 100%), url('../img/t1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -382,6 +458,7 @@ nav ul li a {
     width: 90%;
     margin: 0 auto;
     z-index: 999999999;
+    margin-bottom: -105px;
 }
 
 
@@ -389,7 +466,6 @@ nav ul li a {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 20px 0;
     overflow: hidden;
     border-top: 1px solid var(--color-Primario);
 }

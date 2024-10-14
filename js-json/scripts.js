@@ -140,6 +140,91 @@ document.addEventListener("DOMContentLoaded", function() {
     getInitialToken();
 });
 
+
+
+
+
+function toggleSpecs() {
+    const specs = document.getElementById("specs");
+    specs.classList.toggle("show");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Obtener todos los elementos con la clase 'dropdown-item'
+var dropdownItems = document.querySelectorAll('.dropdown-item');
+
+// Agregar eventos de mouseover y mouseout para controlar la animación
+dropdownItems.forEach(function(item) {
+    var img = item.querySelector('img');
+    
+    // Cuando se pasa el cursor, mostrar la imagen
+    item.addEventListener('mouseenter', function() {
+        img.classList.remove('hover-out');
+    });
+    
+    // Cuando el cursor sale, esconder la imagen con animación inversa
+    item.addEventListener('mouseleave', function() {
+        img.classList.add('hover-out');
+    });
+});
+
+
+
+
+// Función para cambiar las imágenes al hacer hover
+function cambiarImagenAlHover(id, imgAbierto, imgCerrado) {
+    const imagen = document.getElementById(id);
+     
+    imagen.addEventListener('mouseover', function() {
+        imagen.src = imgCerrado; // Cambia a la imagen "cerrado"
+    });
+
+    imagen.addEventListener('mouseout', function() {
+        imagen.src = imgAbierto; // Vuelve a la imagen "abierto"
+    });
+}
+
+// Aplicamos la función a cada una de las imágenes
+cambiarImagenAlHover('img1', 'img/abierto1.jpg', 'img/cerrado1.jpg');
+cambiarImagenAlHover('img2', 'img/abierto2.jpg', 'img/cerrado2.jpg');
+cambiarImagenAlHover('img3', 'img/abierto3.jpg', 'img/cerrado3.jpg');
+cambiarImagenAlHover('img4', 'img/abierto4.jpg', 'img/cerrado4.jpg');
+
+document.getElementById('qbo-carbon').addEventListener('click', function() {
+    const section = document.getElementById('qbo-c');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+document.getElementById('qbo-gas').addEventListener('click', function() {
+    const section = document.getElementById('qbo-g');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+document.getElementById('qbot-card').addEventListener('click', function() {
+    const section = document.getElementById('qbot-c');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+document.getElementById('qbit-card').addEventListener('click', function() {
+    const section = document.getElementById('qbito');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+
 //Obtener precios
 const obtenerPrecios = async () => {
     const token = localStorage.getItem('access_token');
