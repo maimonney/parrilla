@@ -37,28 +37,31 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); 
 
-    // Código para galería de imágenes
-    const galleryNames = document.querySelectorAll('.galeria-name');
-    const images = document.querySelectorAll('.gallleryprducts img');
+   // Código para galería de imágenes
+const galleryNames = document.querySelectorAll('.galeria-name');
+const images = document.querySelectorAll('.gallleryprducts img');
 
-    galleryNames.forEach(name => {
-        name.addEventListener('mouseover', () => {
-            const index = name.getAttribute('data-img');
-            images.forEach((img, i) => {
-                img.classList.toggle('show', i == index);
-            });
-        });
+// Función para mostrar una imagen
+function showImage(index) {
+    images.forEach((img, i) => {
+        img.classList.toggle('show', i == index);
     });
+}
 
-    // Asegúrate de que maingallery esté presente antes de agregar el listener
-    const maingallery = document.querySelector('.maingallery');
-    if (maingallery) {
-        maingallery.addEventListener('mouseleave', () => {
-            images.forEach((img, i) => {
-                img.classList.toggle('show', i == 0);
-            });
-        });
-    }
+galleryNames.forEach(name => {
+    name.addEventListener('mouseover', () => {
+        const index = name.dataset.img;  // Usando dataset para obtener el valor de data-img
+        showImage(index);
+    });
+});
+
+// Asegúrate de que maingallery esté presente antes de agregar el listener
+const maingallery = document.querySelector('.maingallery');
+if (maingallery) {
+    maingallery.addEventListener('mouseleave', () => {
+        showImage(0); // Mostrar la primera imagen al salir de la galería
+    });
+}
 
     // Nav: overlay del ul
     const overlay = document.getElementById('overlay');
