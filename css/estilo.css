@@ -958,6 +958,9 @@ footer{
     .navbar-nav li,
     .li_productos{
         text-align: left;
+        font-family: 'VarsityTeam';
+text-transform: uppercase;
+color: white;
         
     }
 
