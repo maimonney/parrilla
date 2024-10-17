@@ -27,6 +27,10 @@ body {
     -ms-user-select: none; /* Para Internet Explorer */
 }
 
+.cards a{
+    text-decoration: none; 
+}
+
 .card {
     width: 20%; /* Ajuste del tamaño para que las 4 tarjetas quepan bien */
     background-color: var(--color-Secundario);
@@ -268,6 +272,32 @@ table tr:last-child td {
     height: 100%;
     object-fit: cover;
 }
+
+
+
+/* Estilo para la lista del kit */
+.lista_kit {
+    text-align: left;
+    color: #e0d19c;
+    list-style-type: none; /* Elimina las viñetas predeterminadas */
+    padding: 0;
+    font-size: 1.4em;
+    margin-top: 25px;
+}
+
+.lista_kit li {
+    margin-bottom: 5px;
+}
+
+/* Personalizar el símbolo de la lista */
+.lista_kit li::before {
+    content: "- "; /* Añade un guion antes de cada elemento */
+    color: #e0d19c; /* Mantiene el mismo color */
+}
+
+
+
+
 
 /* Títulos */
 .divisiones h1 h2 {
