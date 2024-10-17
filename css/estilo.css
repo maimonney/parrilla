@@ -982,14 +982,6 @@ footer{
         overflow-y: scroll;
     }
 
-    .cards {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .card {
-        width: 100%; /* Ajustar el ancho a la pantalla */
-    }
 }
 
 @media screen and (min-width: 990px) and (max-width: 1200px) {

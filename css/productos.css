@@ -30,7 +30,6 @@ body {
 .cards a {
     text-decoration: none; 
 }
-
 .card {
     width: 20%; /* Ajuste del tamaño para que las 5 tarjetas quepan bien */
     background-color: var(--color-Secundario);
@@ -39,12 +38,14 @@ body {
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: all 0.4s ease;
-    position: relative;
+    position: relative; /* Asegúrate de que el contenedor tenga posición relativa */
     margin-bottom: 30px; /* Añade espacio inferior para asegurar uniformidad */
     border: 2px solid transparent; /* Solución al borde blanco */
 }
 
 .card__img {
+    position: relative; /* Para que el texto pueda posicionarse sobre la imagen */
+    overflow: hidden; /* Asegura que el texto no se salga del contenedor */
     width: 100%;
     height: 200px;
     background-size: cover;
@@ -56,8 +57,13 @@ body {
 }
 
 .card__info {
-    padding: 16px 24px;
-    background-color: var(--color-Secundario);
+    position: absolute; /* Posiciona el contenido de la tarjeta sobre la imagen */
+    bottom: 0; /* Alinea el contenido en la parte inferior */
+    left: 0; /* Alinea el contenido a la izquierda */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 16px 24px; /* Añade un poco de relleno */
+    background-color: rgba(224, 209, 156, 0.7); /* Fondo semitransparente para el texto */
+    color: white; /* Cambia el color del texto para mejorar la legibilidad */
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     transition: background-color 0.4s ease;
@@ -82,12 +88,6 @@ body {
 .card:hover .card__img--hover {
     height: 100%;
     opacity: 0.3;
-}
-
-.card:hover .card__info {
-    background-color: transparent;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .card:hover {
@@ -437,8 +437,18 @@ h1 {
 
 @media screen and (max-width: 580px) {
     .card {
-        width: 60%; 
-        
+        height: 150px;
+        width: 40%; 
+        margin: 7px;
+    }
+
+    .card__info {
+        padding: 5px; /* Ajusta el relleno en pantallas pequeñas */
+        font-size: 14px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+    }
+
+    .cards{
+        gap: 0;
     }
 
     .carru_cont_producto {
